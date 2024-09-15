@@ -16,17 +16,18 @@ public class Example3 {
         * */
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        // Here bean name is same as POJO (object) name and bean is called with this name only
-        // If name parameter is not given, along with datatype of Bean, then exception comes :-
-        //  NoUniqueBeanDefinitionException
+        // Note :- If the name is given with @Bean Annotation, then the Bean name is changed to this name and
+        // not to the name of object and this name should be used with getBean method, otherwise it
+        // will give NoUniqueBeanDefinitionException
 
-        Vehicle veh1 = context.getBean("veh1" , Vehicle.class);
+
+        Vehicle veh1 = context.getBean("Mercedez" , Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh1.getName());
 
-        Vehicle veh2 = context.getBean("vehicle2" , Vehicle.class);
+        Vehicle veh2 = context.getBean("Ford" , Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh2.getName());
 
-        Vehicle veh3 = context.getBean("vehicle3" , Vehicle.class);
+        Vehicle veh3 = context.getBean("Ferrari" , Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh3.getName());
 
 //        Vehicle veh1 = context.getBean( Vehicle.class);

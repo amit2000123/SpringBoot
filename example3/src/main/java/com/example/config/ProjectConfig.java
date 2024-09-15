@@ -18,21 +18,21 @@ public class ProjectConfig {
     this method when it initializes its context and adds the returned
     value to the context.
     * */
-    @Bean(name = "veh1")
+    @Bean(name = "Mercedez")
     Vehicle vehicle1() {
         Vehicle veh = new Vehicle();
         veh.setName("Mercedez Benz");
         return veh;
     }
 
-    @Bean(value = "veh2")
+    @Bean(value = "Ford")
     Vehicle vehicle2() {
         Vehicle veh = new Vehicle();
         veh.setName("Ford Figo");
         return veh;
     }
 
-    @Bean("veh3")
+    @Bean("Ferrari")
     Vehicle vehicle3() {
         Vehicle veh = new Vehicle();
         veh.setName("Ferrari GT");
