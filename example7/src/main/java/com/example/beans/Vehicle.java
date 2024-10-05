@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
+
 public class Vehicle {
 
     private String name ;
@@ -27,14 +27,14 @@ public class Vehicle {
 // we must explicitly add the javax.annotation-api dependency to our project:
 // https://www.baeldung.com/spring-postconstruct-predestroy#javaxannotation-or-jakartaannotation
 
-    @PostConstruct
-    public void initialize() {
-        this.name = "BMW";
-    }
-    @PreDestroy
-    public void destroy(){
-        System.out.println("Destroying the bean when close() method of Application context is invoked");
-    }
+//    @PostConstruct
+//    public void initialize() {
+//        this.name = "BMW";
+//    }
+//    @PreDestroy
+//    public void destroy(){
+//        System.out.println("Destroying the bean when close() method of Application context is invoked");
+//    }
 
     public void printHello(){
         System.out.println("Printing Hello from Component Vehicle Bean");
