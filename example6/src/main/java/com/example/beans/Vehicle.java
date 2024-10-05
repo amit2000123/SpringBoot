@@ -15,7 +15,7 @@ public class Vehicle {
     }
 
     public void setName(String name) {
-        name = name;
+        this.name = name;
     }
 
 //@PostConstruct also depends on the Springboot version
