@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="vehicle" class="com.example.beans.Vehicle">
+        <property name="name" value="Ferrari"/>
+    </bean>
+
+<!--    Annotations                   XML Config
+        @Primary                      primary
+        @PostContruct                 init-method
+        @PreDestroy                   destroy-method
+-->
+
+<!--    <bean id="vehicle" name="vehicleBean" class="com.example.beans.Vehicle" primary="true" destroy-method="" init-method="">-->
+<!--        <property name="name" value="Honda"/>-->
+<!--    </bean>-->
+
+    <bean id="vehicle2" name="vehicleBean" class="com.example.beans.Vehicle">
+        <property name="name" value="Honda"/>
+    </bean>
+</beans>
